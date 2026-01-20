@@ -429,3 +429,38 @@ body.home {
 .home-card button {
     pointer-events: auto;
 }
+/* ================================
+   AJUSTES DE TEXTO PARA CELULAR
+================================ */
+@media (max-width: 768px) {
+
+    body {
+        font-size: 18px; /* base maior */
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
+
+    button {
+        font-size: 1.1rem;
+        padding: 14px 24px;
+    }
+
+    .typing-text {
+        font-size: 2rem;
+    }
+
+    .calendar {
+        transform: scale(1.1);
+    }
+}
