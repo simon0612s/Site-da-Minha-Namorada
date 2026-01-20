@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Nosso Tempo ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Música -->
+    <audio id="bg-music" loop preload="auto">
+    <source src="Ed Sheeran - Perfect.mp3" type="audio/mpeg">
+</audio>
+
+
+    <button class="music-btn" onclick="toggleMusic()">🎵</button>
+
+    <main class="final-container">
+
+        <!-- Título com efeito digitando -->
+        <h1 id="typing-text"></h1>
+
+        <!-- Bloco principal estilo cartão -->
+        <section class="love-card">
+
+            <p class="love-text">
+                Desde o dia em que você entrou na minha vida,
+                tudo ganhou mais cor, mais sentido e mais amor.
+            </p>
+
+            <!-- Calendário -->
+            <div class="calendar">
+
+                <div class="calendar-header">
+                    <span>📅 Nosso tempo juntos</span>
+                </div>
+
+                <div class="calendar-body">
+                    <div class="calendar-box">
+                        <small>Início</small>
+                        <strong>28/09/2024</strong>
+                    </div>
+
+                    <div class="calendar-box highlight">
+                        <small>Hoje</small>
+                        <strong id="todayDate"></strong>
+                    </div>
+
+                    <div class="calendar-box total">
+                        <small>Dias juntos</small>
+                        <strong id="daysTogether"></strong>
+                    </div>
+                </div>
+            </div>
+            <button class="surprise-btn" onclick="showSurprise()">
+    Clique aqui ❤️
+</button>
+
+<p id="surpriseText" class="hidden">
+   Para sempre será nós<br>
+      Minha Pequena Princesinha 💜💙
+</p>
+
+
+         
+        </section>
+
+        <button onclick="goToPage('index.html')">
+            Voltar ao início 🔁
+        </button>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
