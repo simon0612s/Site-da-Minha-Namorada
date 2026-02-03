@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Com Carinho</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top-nav">
+    <nav>
+        <span onclick="goToPage('index.html')">🏠</span>
+        <span onclick="goToPage('page2.html')">💗</span>
+        <span onclick="goToPage('page3.html')">🖼️</span>
+        <span onclick="goToPage('page4.html')">🌙</span>
+        <span onclick="goToPage('page6.html')">📅</span>
+    </nav>
+</header>
+
+<audio id="bg-music" loop >
+    <source src="Ed Sheeran - Perfect.mp3" type="audio/mpeg">
+</audio>
+
+<main class="container">
+    <h1 id="typing-text"></h1>
+
+    <p class="soft-text">
+      Nem todos os dias precisam ser vencidos.
+Alguns só precisam ser atravessados.<br>
+Se hoje estiver pesado,
+você não precisa carregar sozinha.<br>
+Eu fico aqui. Com você.
+    </p>
+    <p class="soft-quote" id="soft-quote"></p>
+
+</main>
+<div class="music-control" onclick="toggleMusic()">
+    🎵
+</div>
+<script src="script.js"></script>
+</body>
+</html>
