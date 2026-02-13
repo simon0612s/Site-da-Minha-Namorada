@@ -1,0 +1,312 @@
+/* ============================= */
+/* RESET BÁSICO */
+/* ============================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(180deg,#1e132b, #2b1b3d);
+    color: white;
+    overflow-x: hidden;
+}
+
+/* ============================= */
+/* BOTÃO MENU ☰ */
+/* ============================= */
+.menu-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 45px;
+    height: 45px;
+    background: rgba(255,255,255,0.1);
+    border: 2px solid #3d2a5f;
+    border-radius: 8px;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.menu-btn:hover {
+    background: #2a183d;
+}
+/* ============================= */
+/* OVERLAY */
+/* ============================= */
+
+#sidebarContainer {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(3px);
+    z-index: 2000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+#sidebarContainer.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* ============================= */
+/* SIDEBAR */
+/* ============================= */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100vh;
+    background: linear-gradient(180deg, #241236, #12091f);
+    padding: 100px 35px 40px;
+    transform: translateX(-100%);
+    transition: transform 0.35s ease;
+    box-shadow: 6px 0 30px rgba(0,0,0,0.6);
+}
+#sidebarContainer.active .sidebar {
+    transform: translateX(0);
+}
+
+/* ============================= */
+/* BOTÃO FECHAR ✕ */
+/* ============================= */
+/* BOTÃO DE FECHAR */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: rgba(255,255,255,0.1);
+    border: 2px solid #3d2a5f;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+
+/* ============================= */
+/* CONTEÚDO SIDEBAR */
+/* ============================= */
+.sidebar-content {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    margin-top: 40px;
+}
+
+.sidebar-content p h2{
+    display: block;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+.sidebar-content p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #d8cfff;
+    margin-bottom: 35px;
+}
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+.sidebar-menu a {
+    display: block;
+    font-size: 16px;
+    color: #ffffff;
+    text-decoration: none;
+    margin-bottom: 18px;
+    transition: all 0.3s ease;
+}
+
+.sidebar-menu a:hover {
+    color: #c6a6ff;
+    transform: translateX(5px);
+}
+
+.sidebar a {
+    display: block;        /* 🔑 ISSO resolve */
+    margin-top: 6px;
+     color: #ffffff;              /* branco igual ao texto */
+    text-decoration: none;       /* tira sublinhado */
+    font-weight: 400;            /* igual ao texto normal */
+    cursor: pointer;
+}
+
+/* GARANTE QUE PARÁGRAFOS NÃO "SEGUREM" OS LINKS */
+.sidebar p {
+    display: block;
+}
+
+/* SE OS LINKS ESTIVEREM DENTRO DO MESMO <p> */
+.sidebar p a {
+    display: block;
+}
+
+/* ============================= */
+/* ÁLBUM */
+/* ============================= */
+.album-section {
+    padding: 120px 24px 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.album-title {
+    font-size: 2.5rem;
+    margin-bottom: 6px;
+}
+
+.album-year {
+    font-size: 1.2rem;
+    color: #b983ff;
+    margin-bottom: 14px;
+}
+
+.album-subtitle {
+    opacity: 0.85;
+    margin-bottom: 40px;
+}
+
+/* ============================= */
+/* BOTÃO ADICIONAR FOTO */
+/* ============================= */
+.add-photo-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.add-photo-btn {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 3rem;
+    font-weight: 300;
+
+    color: rgba(255, 255, 255, 0.9);
+
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 18px;
+
+    transition: all 0.3s ease;
+}
+
+.add-photo-btn:hover {
+    background: rgba(255, 255, 255, 0.22);
+    transform: translateY(-4px);
+}
+
+
+/* ============================= */
+/* GRID DE FOTOS */
+/* ============================= */
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 24px;
+}
+
+.photo-card {
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+     box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.35);
+        
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.photo-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.photo-card:hover img {
+    transform: translateY(-8px);
+    box-shadow:
+        0 20px 45px rgba(122, 47, 191, 0.4);
+}
+.photo-card:hover img {
+    transform: scale(1.08);
+}
+
+/* ============================= */
+/* LIGHTBOX */
+/* ============================= */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.lightbox-img {
+    max-width: 90%;
+    max-height: 85%;
+    border-radius: 20px;
+}
+
+.close-lightbox {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    font: size 2rem;;
+    color: white;
+    cursor: pointer;
+}
+
+/* ============================= */
+/* NAVEGAÇÃO ENTRE ANOS */
+/* ============================= */
+.year-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px; /* 👈 AQUI você controla a distância */
+    margin-top: 40px;
+}
+
+.year-navigation a {
+    color: #b983ff;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 8px 14px;
+    font-weight: 500;
+}
+
+.year-navigation a:hover {
+    opacity: 0.8;
+}
+
+body.sidebar-open .menu-btn {
+    opacity: 0;
+    pointer-events: none;
+}
+
